@@ -1,0 +1,86 @@
+{
+    "id": "a688bbd572c95eee3058539caea9caa4",
+    "name": "USAJobs API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "bf492f88eea0b23fa46a4fd4939c5335",
+            "name": "Search Jobs",
+            "url": "httpsapi.usa.gov\/\/jobs\/search.json",
+            "description": "his Jobs API allows you to tap into a list of current jobs openings with the government. ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "query",
+                    "description": "Attempts to extract as much signal as possible from the input text. ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "organization_ids",
+                    "description": "A comma-separated string specifying which federal, state, or local agencies to use as a filter.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "hi",
+                    "description": "No highlighting is included by default. Use 'hl=1' to highlight terms in the position title that match terms in the user's search. Highlighted terms are surrounded with <em> tags.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "size",
+                    "description": "Specifies how many results are returned (up to 100 at a time).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "from",
+                    "description": "Specifies the starting record.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tags",
+                    "description": "A comma-separated string specifying the level of government. Current tags are federal, state, county, and city. To get federal and state listings, you would pass in federal,state for the tags parameter.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Lat_lon",
+                    "description": "Comma-separated pair denoting the position of the searcher looking for a job. For example, 'lat_lon=37.783333,-122.416667' is the value for San Francisco, CA. For generic job searches (e.g., 'jobs', 'internships') where this parameter is passed in, the Jobs API server will sort jobs results and return those that are closest to the searcher's location. For jobs that have multiple locations associated with the position, the distance to the closest location is used to determine the overall geo-dist",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a688bbd572c95eee3058539caea9caa4",
+            "rawModeData": ""
+        }
+    ]
+}
