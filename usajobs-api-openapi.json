@@ -1,0 +1,120 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "USAJobs API",
+        "description": "Federal, state, and local government agencies are hiring and have thousands of job openings across the country, posted on USAJobs.gov and local government jobs sites.",
+        "termsOfService": "https:\/\/www.usa.gov\/About\/developer-resources\/terms-of-service.shtml"
+    },
+    "servers": [
+        "httpsapi.usa.gov\/"
+    ],
+    "paths": {
+        "\/jobs\/search.json": {
+            "get": {
+                "summary": "Search Jobs",
+                "description": "his Jobs API allows you to tap into a list of current jobs openings with the government. ",
+                "operationId": "SearchJobs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "Attempts to extract as much signal as possible from the input text. "
+                    },
+                    {
+                        "name": "organization_ids",
+                        "in": "query",
+                        "description": "A comma-separated string specifying which federal, state, or local agencies to use as a filter."
+                    },
+                    {
+                        "name": "hi",
+                        "in": "query",
+                        "description": "No highlighting is included by default. Use 'hl=1' to highlight terms in the position title that match terms in the user's search. Highlighted terms are surrounded with <em> tags."
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "description": "Specifies how many results are returned (up to 100 at a time)."
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Specifies the starting record."
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "A comma-separated string specifying the level of government. Current tags are federal, state, county, and city. To get federal and state listings, you would pass in federal,state for the tags parameter."
+                    },
+                    {
+                        "name": "Lat_lon",
+                        "in": "query",
+                        "description": "Comma-separated pair denoting the position of the searcher looking for a job. For example, 'lat_lon=37.783333,-122.416667' is the value for San Francisco, CA. For generic job searches (e.g., 'jobs', 'internships') where this parameter is passed in, the Jobs API server will sort jobs results and return those that are closest to the searcher's location. For jobs that have multiple locations associated with the position, the distance to the closest location is used to determine the overall geo-dist"
+                    }
+                ],
+                "responses": {
+                    "Successful response.": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Jobs"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Jobs": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "the id for the job",
+                        "type": "string"
+                    },
+                    "position_title": {
+                        "description": "the title for the position",
+                        "type": "string"
+                    },
+                    "organization_name": {
+                        "description": "the organization name",
+                        "type": "string"
+                    },
+                    "rate_interval_code": {
+                        "description": "the rate interval code",
+                        "type": "string"
+                    },
+                    "minimum": {
+                        "description": "minimum id",
+                        "type": "string"
+                    },
+                    "maximum": {
+                        "description": "the maximum id",
+                        "type": "string"
+                    },
+                    "start_date": {
+                        "description": "the start date",
+                        "type": "string"
+                    },
+                    "end_date": {
+                        "description": "the end date",
+                        "type": "string"
+                    },
+                    "locations": {
+                        "description": "the job locations",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "the url for the job",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
