@@ -1,5 +1,5 @@
 {
-    "id": "a688bbd572c95eee3058539caea9caa4",
+    "id": "6540e9304ef0a1ea1fa31616ebdad6b8",
     "name": "USAJobs API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "bf492f88eea0b23fa46a4fd4939c5335",
+            "id": "e503984594ba9f88c320ae4adf7929d2",
             "name": "Search Jobs",
             "url": "httpsapi.usa.gov\/\/jobs\/search.json",
             "description": "his Jobs API allows you to tap into a list of current jobs openings with the government. ",
@@ -79,7 +79,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a688bbd572c95eee3058539caea9caa4",
+            "collectionId": "6540e9304ef0a1ea1fa31616ebdad6b8",
             "rawModeData": ""
         }
     ]
